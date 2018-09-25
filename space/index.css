@@ -1,0 +1,114 @@
+.dots-small {
+  margin-top: 150px;
+  width: 500px;
+  height: 50vh;
+  background-image: radial-gradient(white 0.1%, transparent 1%);
+  background-size: 300px 300px;
+  background-position: 0px 300px;
+  will-change: background-position, transform;
+  background-color: transparent;
+}
+.dots-big {
+  width: 500px;
+  height: 50vh;
+  background-image: radial-gradient(white 0.3%, transparent 1%);
+  background-size: 400px 400px;
+  background-position: -200px 0px;
+  will-change: background-position, transform;
+  background-color: transparent;
+  transform: rotate(60deg);
+}
+.lines-big {
+  width: 500px;
+  height: 50vh;
+  background-image: linear-gradient(to right, white 0.5px, transparent 0.2px);
+  background-size: 300px 50px;
+  background-position: 0px -100px;
+  background-repeat: repeat-x;
+  will-change: background-position, transform;
+  background-color: transparent;
+}
+.lines-small {
+  width: 500px;
+  height: 50vh;
+  background-image: linear-gradient(to right, white 0.5px, transparent 0.5px);
+  background-size: 300px 30px;
+  background-position: -150px -400px;
+  background-repeat: repeat-x;
+  will-change: background-position, transform;
+  background-color: transparent;
+}
+.animate-small-dots {
+  animation-name: smallDotsMove;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.animate-big-dots {
+  animation-name: bigDotsMove;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.animate-big-lines {
+  animation-name: bigLinesMove;
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.animate-small-lines {
+  animation-name: smallLinesMove;
+  animation-duration: .25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes smallDotsMove {
+  0% {
+    background-position: 0px 300px;
+  }
+  100% {
+    background-position: -600px 600px;
+  }
+}
+@keyframes bigDotsMove {
+  0% {
+    background-position: -200px 0px;
+  }
+  100% {
+    background-position: -200px 400px;
+  }
+}
+@keyframes bigLinesMove {
+  0% {
+    background-position: 0px -100px;
+  }
+  100% {
+    background-position: 0px 1200px;
+  }
+}
+@keyframes smallLinesMove {
+  0% {
+    background-position: -150px -400px;
+  }
+  100% {
+    background-position: -150px 1400px;
+  }
+}
+h1 {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-family: helvetica;
+  color: white;
+  text-shadow: 1px 1.5px #555;
+}
+body {
+  display: flex;
+  max-height: 90vh;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: linear-gradient(to right, #0f89e8 0%, #05c5f2 100%);
+}
